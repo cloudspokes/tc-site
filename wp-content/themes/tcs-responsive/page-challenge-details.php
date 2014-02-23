@@ -706,7 +706,7 @@ $documents = $contest->Documents;
 	considered to have no reliability rating, and therefore gets no bonus.
 	Reliability bonus does not apply to Digital Run winnings. Since reliability rating is 
 	based on the past 15 projects, it can only have 15 discrete values.<br>
-<a href="http://apps.topcoder.com/wiki/x/MQD9Ag">Read more.</a></p>
+<a href="http://help.topcoder.com/development/understanding-reliability-and-ratings/">Read more.</a></p>
 </article>
 
 
@@ -876,9 +876,11 @@ $documents = $contest->Documents;
 				<?php 
 				if ( $contestType != 'design' ):
 				?>							
+<!--
 				<th class="ratingColumn">
 					<div>Rating</div>
 				</th>
+-->				
 				<th class="reliabilityColumn">
 					<div>Reliability</div>
 				</th>
@@ -939,9 +941,11 @@ $documents = $contest->Documents;
 				<?php 
 				if ( $contestType != 'design' ):
 				?>
+<!--				
 				<td class="ratingColumn">
 					Not Rated
 				</td>
+-->				
 				<td class="reliabilityColumn">
 					<?php echo $registrant->reliability; ?>			
 				</td>

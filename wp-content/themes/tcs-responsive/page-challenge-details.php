@@ -785,23 +785,22 @@ $documents = $contest->Documents;
 <article id="stockPhotography">
 	<h1>STOCK PHOTOGRAPHY</h1>
 	<p>Stock photography is not allowed in this challenge. All submitted elements must be designed solely by you.<br>
-  <a href="http://topcoder.com/home/studio/the-process/copyright-questions/">See this page for more details.</a></p>
+  <a href="http://help.topcoder.com/design/design-copyright-and-font-policies/policy-for-stock-photos-in-design-submissions/">See this page for more details.</a></p>
 </article>
 
 <article id="howtosubmit">
 	<h1>How to Submit</h1>
 	<p>
 		<ul class="howToSubmit">
-			<li>New to Studio? <a href="http://topcoder.com/home/studio/new-member-guide/" target="_blank">Learn how to compete
+			<li>New to Studio? <a href="http://help.topcoder.com/design/submitting-to-a-design-challenge/getting-started-in-design-challenges/" target="_blank">Learn how to compete
 				here</a>.
 			</li>
 			<li>Upload your submission in three parts (<a
-					href="http://topcoder.com/home/studio/the-process/how-to-submit-to-a-contest/" target="_blank">see this FAQs for
-				more information</a>). Your design should be finalized and should contain only a single design
+					href="http://help.topcoder.com/design/submitting-to-a-design-challenge/formatting-your-submission-for-design-challenges/" target="_blank">Learn more here</a>). Your design should be finalized and should contain only a single design
 				concept (do not include multiple designs in a single submission).
 			</li>
 			<li>If your submission wins, your source files must be correct and
-				"<a href="http://topcoder.com/home/studio/the-process/final-fixes/" target="_blank">Final Fixes</a>" (if
+				"<a href="http://help.topcoder.com/design/submitting-to-a-design-challenge/design-final-fixes-policies/" target="_blank">Final Fixes</a>" (if
 				applicable) must be completed before payment can be released.
 			</li>
 			<li>You may submit as many times as you'd like during the submission phase, but only the number of files
@@ -834,7 +833,7 @@ $documents = $contest->Documents;
 	considered to have no reliability rating, and therefore gets no bonus.
 	Reliability bonus does not apply to Digital Run winnings. Since reliability rating is 
 	based on the past 15 projects, it can only have 15 discrete values.<br>
-<a href="http://apps.topcoder.com/wiki/x/MQD9Ag">Read more.</a></p>
+<a href="http://help.topcoder.com/development/understanding-reliability-and-ratings/">Read more.</a></p>
 </article>
 
 

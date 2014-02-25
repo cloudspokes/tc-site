@@ -89,7 +89,7 @@ $postId = $post->ID;
 							<li><a href="javascript:;" class="active link">Open Challenges</a></li>
 							<li><a href="<?php echo $pastChallenges;?>" class="link">Past Challenges</a></li>
 							<li><a href="<?php echo $reviewChallenges;?>" class="link">Review Opportunities </a></li>
-							<li><a href="<?php echo $bugraceChallenges;?>" class="link">Bug Races</a></li>
+							<li><a href="<?php echo $bugraceChallenges;?>" class="link">Races</a></li>
 						</ul>
 					</div>
 					<div class="rt">
@@ -268,11 +268,11 @@ $postId = $post->ID;
 						<table class="dataTable tcoTable">
 							<thead>
 								<tr>
-									<th class="colCh asc" data-placeholder="challengeName">Challenges<i></i></th>
+									<th class="colCh" data-placeholder="challengeName">Challenges<i></i></th>
 									<th class="colType" data-placeholder="challengeType">Type<i></i></th>
-									<th class="colTime noSort" data-placeholder="postingDate">Timeline<i></i></th>
+									<th class="colTime desc" data-placeholder="postingDate">Timeline<i></i></th>
 									<th class="colTLeft noSort" data-placeholder="currentPhaseRemainingTime">Time Left<i></i></th>
-									<th class="colPur noSort" data-placeholder="prize">Purse<i></i></th>
+									<th class="colPur noSort" data-placeholder="prize">Prize<i></i></th>
 									<th class="colPhase noSort" data-placeholder="currentPhase">Current Phase<i></i></th>
 									<th class="colReg noSort" data-placeholder="numRegistrants">Registrants<i></i></th>
 									<th class="colSub noSort" data-placeholder="numSubmissions">Submissions<i></i></th>

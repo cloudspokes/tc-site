@@ -151,7 +151,9 @@ if( !is_page_template('page-challenges.php') &&
 				<a class="register-facebook" href="#"><span class="animeButton shareFacebook"><span class="shareFacebookHover animeButtonHover"></span></span></a>
 				<a class="register-google" href="#"><span class="animeButton shareGoogle"><span class="shareGoogleHover animeButtonHover"></span></span></a>
 				<a class="register-twitter" href="#"><span class="animeButton shareTwitter"><span class="shareTwitterHover animeButtonHover"></span></span></a>
+<!--
 				<a class="register-github" href="#"><span class="animeButton shareGithub"><span class="shareGithubHover animeButtonHover"></span></span></a>
+-->				
 				<p>Using an existing account is quick and easy.<br />Select the account you would like to use and we'll do the rest for you</p>
 				<div class="clear"></div>
 			</div><!-- END .socials -->
@@ -560,7 +562,7 @@ if( !is_page_template('page-challenges.php') &&
   var auth0Login = new Auth0({
     domain:         'topcoder.auth0.com',
     clientID:       '6ZwZEUo2ZK4c50aLPpgupeg5v2Ffxp9P',
-    callbackURL:    'http://www.topcoder.com/?action=callback',
+    callbackURL:    'https://www.topcoder.com/reg2/callback.action',
     state:			'http://www.topcoder.com/',
     redirect_uri:   'http://www.topcoder.com/'
   });
@@ -573,21 +575,25 @@ if( !is_page_template('page-challenges.php') &&
     redirect_uri:   'http://www.topcoder.com/'
   });
   
+  var socialProviderId = "", socialUserName = "", socialEmail = "",socialProvider = "";
 	auth0Register.parseHash(window.location.hash, function (profile, id_token, access_token, state) {
+			socialProvider = profile.identities[0].connection;
 			var firstName = "" , lastName = "", handle = "", email = "";
-			if(profile.identities[0].connection === googleProvider || profile.identities[0].connection === facebookProvider){
+			if(socialProvider === googleProvider || socialProvider === facebookProvider){
 				firstName = profile.given_name;
 				lastName = profile.family_name;
 				handle = profile.nickname;
 				email = profile.email;
-			} else if(profile.identities[0].connection === twitterProvider){
+				socialProviderId = socialProvider === googleProvider ? 2 : 1;
+			} else if(socialProvider === twitterProvider){
 				var splitName = profile.name.split(" ");
 				firstName = splitName[0];
 				if(splitName.length > 1){
 					lastName = splitName[1];
 				}
 				handle = profile.screen_name;
-			} else if(profile.identities[0].connection === githubProvider){
+				socialProviderId = 3;
+			} else if(socialProvider === githubProvider){
 				var splitName = profile.name.split(" ");
 				firstName = splitName[0];
 				if(splitName.length > 1){
@@ -595,11 +601,17 @@ if( !is_page_template('page-challenges.php') &&
 				}
 				handle = profile.nickname;
 				email = profile.email;
+				socialProviderId = 4;
 			}
+			socialUserName = handle;
+			socialUserId = profile.user_id.split('|')[1];
+			socialEmail = profile.email;				
      $("#registerForm .firstName").val(firstName);
      $("#registerForm .lastName").val(lastName);
      $("#registerForm .handle").val(handle);
      $("#registerForm .email").val(email);
+	
+	 
   });
   
   $('.register-google').on('click', function() {

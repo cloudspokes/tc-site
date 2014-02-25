@@ -261,27 +261,6 @@ $postId = $post->ID;
 				<!-- /.searchFilter -->
 				
 			<?php if($contest_type=="develop") : ?>
-				<div class="instructions">
-					<p class="infoRow">
-						Click on an issue to view its details. If you would like to work on an issue, first view the details and then click "Vote". Voting will be equivalent to registering to work on the issue. Read the
-						<a href="#">full instructions</a>
-						on how to compete.
-					</p>
-
-					<section class="infoBox">
-						<h5>New Opportunities</h5>
-						<p>
-							Interested in reviewing submissions to Bug Race Competitions, performing environment setups, managing source control merges for submissions, etc? Click
-							<a href="#">here</a>
-							to see the available tasks.
-						</p>
-					</section>
-					<p class="infoRow">
-						<em>Your ability to participate in these competitions is conditioned upon your agreement to the TopCoder <a href="#">Terms of Work</a>.
-						</em> <small>Note: Issues that are marked "In Progress" have already received one or more submissions which are currently being verified by TopCoder. Issues that are marked "Open" have not yet received a passing submission. If a submission does not fix the issue, or is too low in quality,
-							TopCoder will restore the issue to the "Open" status.</small>
-					</p>
-				</div>
 				<!-- /.instructions -->
 			<?php endif; ?>	
 				<br/>Coming Soon<!-- coming soon 

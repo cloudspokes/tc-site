@@ -1,2 +1,1 @@
-tc-site
-=======
+# Repo has been moved to https://github.com/topcoderinc/tc-site
